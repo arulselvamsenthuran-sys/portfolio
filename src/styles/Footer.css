@@ -1,0 +1,60 @@
+/* ============================================================
+   Footer Styles
+   ============================================================ */
+
+.footer {
+  background-color: rgba(248, 250, 252, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-top: 1px solid var(--border);
+  padding: 28px 0;
+}
+
+.footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer__copy {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.footer__links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer__icon-link {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius);
+  color: var(--text-secondary);
+  transition: color 0.15s ease, background-color 0.15s ease;
+  text-decoration: none;
+}
+
+.footer__icon-link:hover {
+  color: var(--accent);
+  background-color: var(--accent-light);
+}
+
+.footer__icon-link svg {
+  width: 18px;
+  height: 18px;
+}
+
+@media (max-width: 480px) {
+  .footer__inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}

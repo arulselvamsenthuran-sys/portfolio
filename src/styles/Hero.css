@@ -1,0 +1,185 @@
+/* ============================================================
+   Hero Section Styles
+   ============================================================ */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: var(--navbar-height);
+  background: transparent;
+  position: relative;
+}
+
+.hero__container {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 48px;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  width: 100%;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background-color: var(--accent-light);
+  border: 1px solid #bfdbfe;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+.hero__badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #22c55e;
+  display: inline-block;
+}
+
+.hero__heading {
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.hero__heading span {
+  color: var(--accent);
+}
+
+/* Role / Typing text */
+.hero__role-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 36px;
+}
+
+.hero__role-label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.hero__role {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.hero__cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.2em;
+  background-color: var(--accent);
+  margin-left: 2px;
+  vertical-align: middle;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+.hero__intro {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  max-width: 580px;
+}
+
+.hero__cta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.hero__scroll-hint {
+  margin-top: 24px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero__scroll-hint::before {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 32px;
+  background-color: var(--border);
+}
+
+/* ── Hero Profile Image Column ────────────────────────────── */
+.hero__image-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__image-wrapper {
+  width: 100%;
+  max-width: 340px;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Responsive ────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .hero__container {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+  }
+
+  .hero__image-col {
+    /* Placed neatly below the introduction content on mobile */
+    width: 100%;
+  }
+
+  .hero__image-wrapper {
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero__cta {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero__cta .btn {
+    justify-content: center;
+  }
+
+  .hero__image-wrapper {
+    max-width: 240px;
+  }
+}

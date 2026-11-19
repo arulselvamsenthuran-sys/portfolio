@@ -1,0 +1,137 @@
+/* ============================================================
+   Skills Section Styles
+   ============================================================ */
+
+.skills {
+  background: transparent;
+}
+
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Category Card */
+.skills__category-card {
+  background-color: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius-lg);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: var(--shadow-sm);
+}
+
+.skills__category-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--accent);
+  display: inline-block;
+}
+
+.skills__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Skill Row */
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.skill-item__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill-item__name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.skill-item__percentage {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+/* Skill bar track */
+.skill-item__bar-track {
+  height: 6px;
+  background-color: var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+/* Skill bar fill — width driven by inline style */
+.skill-item__bar-fill {
+  height: 100%;
+  background-color: var(--accent);
+  border-radius: 999px;
+  width: 0%;
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* DevOps interest banner */
+.skills__devops-banner {
+  grid-column: 1 / -1;
+  border: 1px dashed #bfdbfe;
+  border-radius: var(--border-radius-lg);
+  padding: 24px;
+  background-color: var(--accent-light);
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.skills__devops-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.skills__devops-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.skills__devops-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.skills__devops-desc {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ── Responsive ────────────────────────────────────────────── */
+@media (max-width: 960px) {
+  .skills__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skills__devops-banner {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 600px) {
+  .skills__grid {
+    grid-template-columns: 1fr;
+  }
+}
