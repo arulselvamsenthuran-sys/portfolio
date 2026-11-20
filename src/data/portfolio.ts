@@ -109,7 +109,7 @@ export const projects: Project[] = [
       'Implemented transaction deduplication, double-entry bookkeeping, and deterministic financial analysis to evaluate cash flow, savings, and liquidity risks.',
       'Integrated Google Gemini AI for contextual financial explanations with secure authentication, prompt injection protection, and persistent conversational history.',
     ],
-    image: '/images/personal-finance.jpg',           // ← file not yet added; placeholder shows until uploaded
+    image: '/images/personal-finance.png',           // ← actual file on disk is .png
     tags: ['React.js', 'Python', 'FastAPI', 'PostgreSQL', 'SQLAlchemy', 'Gemini API', 'Docker'],
     github: null, // Add real repo URL when available
   },
@@ -152,7 +152,7 @@ export const projects: Project[] = [
       'Applied Object-Oriented Programming principles to organise game components and implement game logic.',
       'Implemented real-time game state management to support interactive gameplay.',
     ],
-    image: '/images/color-slicer.jpg',
+    image: '/images/color-slicer.jpeg',              // ← actual file on disk is .jpeg
     tags: ['C++', 'Object-Oriented Programming (OOP)'],
     github: null, // Add real repo URL when available
   },
